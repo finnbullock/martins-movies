@@ -1,0 +1,8 @@
+/* Import Quicksand font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.gradient {
+	background: linear-gradient(#cb3d4c, #87589e) !important;
+	color: transparent !important;
+	background-clip: text !important;
+}
