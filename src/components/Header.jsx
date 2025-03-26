@@ -1,15 +1,9 @@
-import { Box, Container, IconButton, Link, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
+import Menu from "./Menu";
 
 export default function Header(){
-
-    const menu=[
-        'Home',
-        'Movies',
-        'Blog',
-        'Contact'
-    ];
 
     return(
         <Container
@@ -17,6 +11,7 @@ export default function Header(){
         >
             <Box
                 sx={{
+                    p:'1rem 0',
                     display:'flex',
                     alignItems:'center',
                 }}
@@ -31,26 +26,7 @@ export default function Header(){
                 >
                     Martin's Movies
                 </Typography>
-                <Box
-                    sx={{
-                        display:'flex',
-                        gap:'1rem'
-                    }}
-                >
-                    {menu.map((item)=>(
-                        <Link
-                            key={item}
-                            href='#'
-                            className={item==='Movies'? 'gradient' : ''}
-                            sx={{
-                                fontSize:'1.2rem',
-                                fontWeight:400
-                            }}
-                        >
-                            {item}
-                        </Link>
-                    ))}
-                </Box>
+                <Menu/>
                 <Box
                     sx={{
                         flex:1,

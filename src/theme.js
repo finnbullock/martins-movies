@@ -1,16 +1,22 @@
 const gradient='linear-gradient(#cb3d4c, #87589e)';
 
-const scheme={
-    primary:{
-        main:'#3e4555'
-    },
-    grey:'#948a99'
-};
-
 const theme={
-    palette:scheme,
+    palette:{
+        primary:{
+            main:'#3e4555'
+        },
+        secondary:{
+            main:'#948a99'
+        }
+    },
     typography:{
-        fontFamily:'Quicksand'
+        fontFamily:'Quicksand',
+        h1:{
+            fontSize:'3rem'
+        },
+        h2:{
+            fontSize:'1.5rem'
+        }
     },
     components:{
         MuiLink:{
@@ -18,7 +24,6 @@ const theme={
                 root:{
                     fontFamily:'Quicksand',
                     textDecoration:'none',
-                    color:scheme.grey,
                     '&:hover':{
                         background:gradient,
                         color:'transparent',
