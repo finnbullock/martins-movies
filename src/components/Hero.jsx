@@ -6,7 +6,10 @@ export default function Hero(){
         <Box
             sx={{
                 background:'linear-gradient(#cb3d4c, #87589e)',
-                p:'3rem 0',
+                p:{
+                    xs:'1rem 0',
+                    md:'3rem 0'
+                },
                 display:'flex',
                 alignItems:'center'
             }}

@@ -20,8 +20,16 @@ export default function Footer(){
                         p:'3rem 0',
                         color:'#fff',
                         display:'flex',
+                        flexDirection:{
+                            xs:'column',
+                            md:'row'
+                        },
                         alignItems:'center',
-                        justifyContent:'space-between'
+                        justifyContent:'space-between',
+                        gap:{
+                            xs:'1rem',
+                            md:0
+                        }
                     }}
                 >
                     <Box>
@@ -30,7 +38,11 @@ export default function Footer(){
                                 flex:1,
                                 fontSize:'1.5rem',
                                 fontWeight:600,
-                                mb:'0.5rem'
+                                mb:'0.5rem',
+                                textAlign:{
+                                    xs:'center',
+                                    md:'left'
+                                }
                             }}
                         >
                             Martin's Movies

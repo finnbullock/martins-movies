@@ -82,7 +82,10 @@ export default function MovieGrid(){
                     spacing={2}
                 >
                     <Grid
-                        size={6}
+                        size={{
+                            xs:12,
+                            md:6
+                        }}
                     >
                         <TextField
                             value={search}
@@ -104,7 +107,10 @@ export default function MovieGrid(){
                         />
                     </Grid>
                     <Grid
-                        size={6}
+                        size={{
+                            xs:12,
+                            md:6
+                        }}
                     >
                         <Box
                             sx={{
@@ -124,7 +130,11 @@ export default function MovieGrid(){
                             movies.map((movie)=>(
                                 <Grid
                                     key={movie.id}
-                                    size={3}
+                                    size={{
+                                        xs:6,
+                                        sm:4,
+                                        lg:3
+                                    }}
                                 >
                                     <Movie
                                         movie={movie}

@@ -13,7 +13,15 @@ export default function Header(){
                 sx={{
                     p:'1rem 0',
                     display:'flex',
+                    flexDirection:{
+                        xs:'column',
+                        md:'row'
+                    },
                     alignItems:'center',
+                    gap:{
+                        xs:'1rem',
+                        md:0
+                    }
                 }}
             >
                 <Typography

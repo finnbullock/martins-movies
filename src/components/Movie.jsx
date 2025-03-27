@@ -54,6 +54,10 @@ export default function Movie({movie}){
                 <Box
                     sx={{
                         display:'flex',
+                        flexDirection:{
+                            xs:'column',
+                            md:'row'
+                        },
                         gap:'0.5rem'
                     }}
                 >
