@@ -7,7 +7,8 @@ const theme={
         },
         secondary:{
             main:'#948a99'
-        }
+        },
+        gradient:gradient
     },
     typography:{
         fontFamily:'Quicksand',
@@ -16,6 +17,14 @@ const theme={
         },
         h2:{
             fontSize:'1.5rem'
+        },
+        h3:{
+            fontSize:'1.5rem',
+            fontWeight:500
+        },
+        p:{
+            fontSize:'0.9rem',
+            fontFamily:'Quicksand'
         }
     },
     components:{

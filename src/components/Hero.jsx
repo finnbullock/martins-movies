@@ -6,7 +6,7 @@ export default function Hero(){
         <Box
             sx={{
                 background:'linear-gradient(#cb3d4c, #87589e)',
-                height:200,
+                p:'3rem 0',
                 display:'flex',
                 alignItems:'center'
             }}
@@ -20,13 +20,16 @@ export default function Hero(){
                 <Typography
                     variant='h1'
                     sx={{
-                        mb:'1rem'
+                        mb:'0.5rem'
                     }}
                 >
                     Movies
                 </Typography>
                 <Typography
                     variant='h2'
+                    sx={{
+                        opacity:0.75
+                    }}
                 >
                     Browse movies
                 </Typography>

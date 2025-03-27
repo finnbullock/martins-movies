@@ -29,7 +29,8 @@ export default function Footer(){
                             sx={{
                                 flex:1,
                                 fontSize:'1.5rem',
-                                fontWeight:600
+                                fontWeight:600,
+                                mb:'0.5rem'
                             }}
                         >
                             Martin's Movies
