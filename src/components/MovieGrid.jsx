@@ -1,4 +1,4 @@
-import { Box, Container, Grid, InputAdornment, Pagination, TextField } from "@mui/material";
+import { Box, Container, Grid, InputAdornment, Pagination, Skeleton, TextField, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -8,10 +8,8 @@ export default function MovieGrid(){
 
     //States
     const [search, setSearch]=useState('');
-
     const [page, setPage]=useState(1);
     const [totalPages, setTotalPages]=useState(0);
-
     const [movies, setMovies]=useState(null);
 
     //Fetch movies on search query or page number change
@@ -122,6 +120,7 @@ export default function MovieGrid(){
                                 page={page}
                                 onChange={(event, value)=>setPage(value)}
                                 count={totalPages}
+                                color='primary'
                             />
                         </Box>
                     </Grid>
@@ -145,27 +144,36 @@ export default function MovieGrid(){
                             <Grid
                                 size={12}
                             >
-                                No movies found
+                                <Typography
+                                    variant='h3'
+                                    sx={{
+                                        mt:'2rem',
+                                        textAlign:'center'
+                                    }}
+                                >
+                                    No movies found
+                                </Typography>
                             </Grid>
                     :
                         Array(20).fill(0).map((x, i)=>(
                             <Grid
-                                size={3}
                                 key={i}
+                                size={{
+                                    xs:6,
+                                    sm:4,
+                                    lg:3
+                                }}
                             >
-                                <Box
+                                <Skeleton
+                                    variant='rounded'
+                                    height={400}
                                     sx={{
-                                        height:400,
-                                        borderRadius:'0.5rem',
-                                        background:theme=>theme.palette.secondary.main
+                                        borderRadius:'0.5rem'
                                     }}
-                                >
-
-                                </Box>
+                                />
                             </Grid>
                         ))
                     }
-                    {}
                 </Grid>
             </Container>
         </Box>

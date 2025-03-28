@@ -57,8 +57,8 @@ export default function WatchedButton({ movieID }){
 
     return(
         <Button
-            onClick={toggleWatched}
             variant='contained'
+            onClick={toggleWatched}
             sx={{
                 p:'0.25rem 0.5rem',
                 textTransform:'none',
